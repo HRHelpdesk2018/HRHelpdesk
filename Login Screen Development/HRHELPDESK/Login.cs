@@ -15,6 +15,13 @@ namespace HRHELPDESK
         public Login()
         {
             InitializeComponent();
+            passwordTextBox.PasswordChar = '*';
+            passwordTextBox.MaxLength = 8;
+        }
+
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Welcome! ");
         }
     }
 }

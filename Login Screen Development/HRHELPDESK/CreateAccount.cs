@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace HRHELPDESK
 {
     public partial class CreateAccount : Form
@@ -14,9 +15,13 @@ namespace HRHELPDESK
         public CreateAccount()
         {
             InitializeComponent();
-        }
+            passwordTextBox.PasswordChar = '*';
+            passwordTextBox.MaxLength = 8;
+            reenterPasswordTextBox.PasswordChar = '*';
+            reenterPasswordTextBox.MaxLength = 8;
+        }        
 
-        private void createButton_Click(object sender, EventArgs e)
+        private void createAccountButton_Click(object sender, EventArgs e)
         {
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
@@ -26,7 +31,7 @@ namespace HRHELPDESK
                 MessageBox.Show(emailAddressTextBox.Text, "message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MessageBox.Show(reenterEmailAddressTextBox.Text, "message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MessageBox.Show(phoneNumberTextBox.Text, "message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                MessageBox.Show("Please check email for verification link of this user. ");
             }
         }
 
@@ -117,6 +122,17 @@ namespace HRHELPDESK
             {
                 e.Cancel = false;
                 errorProvider.SetError(phoneNumberTextBox, null);
+            }
+        }
+
+        private void phoneNumberTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (!Char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Enter a numeric value only. ");
             }
         }
     }
