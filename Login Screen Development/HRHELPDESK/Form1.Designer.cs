@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.HRTitleLabel = new System.Windows.Forms.Label();
             this.signUpButton = new System.Windows.Forms.Button();
             this.loginButton = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.exitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // HRTitleLabel
@@ -63,11 +66,27 @@
             this.loginButton.UseVisualStyleBackColor = true;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // exitButton
+            // 
+            this.exitButton.Location = new System.Drawing.Point(518, 130);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(175, 23);
+            this.exitButton.TabIndex = 5;
+            this.exitButton.Text = "Exit";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(724, 175);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.signUpButton);
             this.Controls.Add(this.HRTitleLabel);
@@ -83,6 +102,8 @@
         private System.Windows.Forms.Label HRTitleLabel;
         private System.Windows.Forms.Button signUpButton;
         private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button exitButton;
     }
 }
 

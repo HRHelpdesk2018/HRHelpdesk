@@ -23,5 +23,17 @@ namespace HRHELPDESK
         {
             MessageBox.Show("Welcome! ");
         }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void newAccountButton_Click(object sender, EventArgs e)
+        {
+            CreateAccount signup = new CreateAccount();
+            this.Hide();
+            signup.ShowDialog();
+        }
     }
 }

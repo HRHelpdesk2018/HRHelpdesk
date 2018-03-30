@@ -15,125 +15,82 @@ namespace HRHELPDESK
         public CreateAccount()
         {
             InitializeComponent();
-            passwordTextBox.PasswordChar = '*';
-            passwordTextBox.MaxLength = 8;
-            reenterPasswordTextBox.PasswordChar = '*';
-            reenterPasswordTextBox.MaxLength = 8;
-        }        
-
-        private void createAccountButton_Click(object sender, EventArgs e)
-        {
-            if (ValidateChildren(ValidationConstraints.Enabled))
-            {
-                MessageBox.Show(usernameTextBox.Text, "message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MessageBox.Show(passwordTextBox.Text, "message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MessageBox.Show(reenterPasswordTextBox.Text, "message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MessageBox.Show(emailAddressTextBox.Text, "message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MessageBox.Show(reenterEmailAddressTextBox.Text, "message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MessageBox.Show(phoneNumberTextBox.Text, "message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MessageBox.Show("Please check email for verification link of this user. ");
-            }
         }
 
-        private void usernameTextBox_Validating(object sender, CancelEventArgs e)
+        private int NumUpperCase(string pass)
         {
-            if (string.IsNullOrEmpty(usernameTextBox.Text))
+            int countupper = 0;
+            foreach (char i in pass)
             {
-                e.Cancel = true;
-                usernameTextBox.Focus();
-                errorProvider.SetError(usernameTextBox, "Enter a username. ");
+                if (char.IsUpper(i))
+                {
+                    countupper++;
+                }
             }
-            else
-            {
-                e.Cancel = false;
-                errorProvider.SetError(usernameTextBox, null);
-            }
+            return countupper;
         }
 
-        private void passwordTextBox_Validating(object sender, CancelEventArgs e)
+        private int NumDigit(string pass)
         {
-            if (string.IsNullOrEmpty(passwordTextBox.Text))
+            int countdigit = 0;
+            foreach (char i in pass)
             {
-                e.Cancel = true;
-                usernameTextBox.Focus();
-                errorProvider.SetError(passwordTextBox, "Enter a password. ");
+                if (char.IsDigit(i))
+                {
+                    countdigit++;
+                }
             }
-            else
-            {
-                e.Cancel = false;
-                errorProvider.SetError(passwordTextBox, null);
-            }
+            return countdigit;
         }
 
-        private void reenterPasswordTextBox_Validating(object sender, CancelEventArgs e)
+        private void CancelButton_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(reenterPasswordTextBox.Text))
-            {
-                e.Cancel = true;
-                usernameTextBox.Focus();
-                errorProvider.SetError(reenterPasswordTextBox, "Re-enter the password. ");
-            }
-            else
-            {
-                e.Cancel = false;
-                errorProvider.SetError(reenterPasswordTextBox, null);
-            }
+            this.Close();
         }
 
-        private void emailAddressTextBox_Validating(object sender, CancelEventArgs e)
+        private void createButton_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(emailAddressTextBox.Text))
+            string username = usernameTextBox.Text;
+            string password = passwordTextBox.Text;
+            string reenterpassword = reenterPasswordTextBox.Text;
+
+            // validates for insufficient fields
+            if (usernameTextBox.Text == "")
             {
-                e.Cancel = true;
-                usernameTextBox.Focus();
-                errorProvider.SetError(emailAddressTextBox, "Enter an email address. ");
+                MessageBox.Show("Enter a username ");
             }
-            else
+            else if (username.Length < 5)
             {
-                e.Cancel = false;
-                errorProvider.SetError(emailAddressTextBox, null);
+                MessageBox.Show("Enter up to 5 characters as a username ");
             }
+            if (passwordTextBox.Text == "")
+            {
+                MessageBox.Show("Enter a password that contains up to 8 characters with an uppercase letter and a number ");
+            }
+            else if (password.Length < 8)
+            {
+                MessageBox.Show("Enter up to 8 characters with an uppercase letter and a number ");
+            }
+            else if (reenterPasswordTextBox.Text != passwordTextBox.Text)
+            {
+                MessageBox.Show("Passwords must match and meet requirements ");
+            }
+
+            MessageBox.Show("Would you like to create this account? ",
+            "Important ",
+            MessageBoxButtons.YesNoCancel,
+            MessageBoxIcon.Warning);
+            
+
+
         }
 
-        private void reenterEmailAddressTextBox_Validating(object sender, CancelEventArgs e)
+        private void memberButton_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(reenterEmailAddressTextBox.Text))
-            {
-                e.Cancel = true;
-                usernameTextBox.Focus();
-                errorProvider.SetError(reenterEmailAddressTextBox, "Re-enter email address. ");
-            }
-            else
-            {
-                e.Cancel = false;
-                errorProvider.SetError(reenterEmailAddressTextBox, null);
-            }
-        }
-
-        private void phoneNumberTextBox_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(phoneNumberTextBox.Text))
-            {
-                e.Cancel = true;
-                usernameTextBox.Focus();
-                errorProvider.SetError(phoneNumberTextBox, "Enter a phone number. ");
-            }
-            else
-            {
-                e.Cancel = false;
-                errorProvider.SetError(phoneNumberTextBox, null);
-            }
-        }
-
-        private void phoneNumberTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-
-            if (!Char.IsDigit(ch) && ch != 8)
-            {
-                e.Handled = true;
-                MessageBox.Show("Enter a numeric value only. ");
-            }
+            Login loginform = new Login();
+            this.Hide();
+            loginform.ShowDialog();
         }
     }
 }
+
