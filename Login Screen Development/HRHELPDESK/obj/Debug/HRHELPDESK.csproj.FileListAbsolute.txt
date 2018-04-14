@@ -42,3 +42,6 @@ C:\Users\hasberrm6943\Documents\GitHub\HRHelpdesk\Login Screen Development\HRHEL
 C:\Users\hasberrm6943\Documents\GitHub\HRHelpdesk\Login Screen Development\HRHELPDESK\obj\Debug\HRHELPDESK.Login.resources
 C:\Users\hasberrm6943\Documents\GitHub\HRHelpdesk\Login Screen Development\HRHELPDESK\obj\Debug\HRHELPDESK.Properties.Resources.resources
 C:\Users\hasberrm6943\Documents\GitHub\HRHelpdesk\Login Screen Development\HRHELPDESK\obj\Debug\HRHELPDESK.csproj.GenerateResource.Cache
+C:\Users\Lioness\Documents\GitHub\HRHelpdesk\Login Screen Development\HRHELPDESK\bin\Debug\HRHELPDESK.exe.config
+C:\Users\Lioness\Documents\GitHub\HRHelpdesk\Login Screen Development\HRHELPDESK\obj\Debug\HRHELPDESK.exe
+C:\Users\Lioness\Documents\GitHub\HRHelpdesk\Login Screen Development\HRHELPDESK\obj\Debug\HRHELPDESK.pdb

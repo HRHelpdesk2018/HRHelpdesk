@@ -1,6 +1,6 @@
 ﻿namespace HRHelpdeskApp
 {
-    partial class Form1
+    partial class Mainform
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.loginButton = new System.Windows.Forms.Button();
+            this.signUpButton = new System.Windows.Forms.Button();
+            this.HRTitleLabel = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // exitButton
+            // 
+            this.exitButton.Location = new System.Drawing.Point(412, 207);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(175, 54);
+            this.exitButton.TabIndex = 9;
+            this.exitButton.Text = "Exit";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // loginButton
+            // 
+            this.loginButton.Location = new System.Drawing.Point(341, 85);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(175, 53);
+            this.loginButton.TabIndex = 8;
+            this.loginButton.Text = "Login";
+            this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+            // 
+            // signUpButton
+            // 
+            this.signUpButton.Location = new System.Drawing.Point(92, 85);
+            this.signUpButton.Name = "signUpButton";
+            this.signUpButton.Size = new System.Drawing.Size(175, 53);
+            this.signUpButton.TabIndex = 7;
+            this.signUpButton.Text = "Sign Up";
+            this.signUpButton.UseVisualStyleBackColor = true;
+            this.signUpButton.Click += new System.EventHandler(this.signUpButton_Click);
+            // 
+            // HRTitleLabel
+            // 
+            this.HRTitleLabel.AutoSize = true;
+            this.HRTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HRTitleLabel.Location = new System.Drawing.Point(88, 33);
+            this.HRTitleLabel.Name = "HRTitleLabel";
+            this.HRTitleLabel.Size = new System.Drawing.Size(376, 24);
+            this.HRTitleLabel.TabIndex = 6;
+            this.HRTitleLabel.Text = "WELCOME TO HR HELP DESK KIOSK!";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(626, 273);
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.loginButton);
+            this.Controls.Add(this.signUpButton);
+            this.Controls.Add(this.HRTitleLabel);
+            this.Name = "Form1";
+            this.Text = "HR Helpdesk";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.Button signUpButton;
+        private System.Windows.Forms.Label HRTitleLabel;
     }
 }
 

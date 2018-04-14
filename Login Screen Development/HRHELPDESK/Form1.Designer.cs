@@ -40,15 +40,15 @@
             // 
             this.HRTitleLabel.AutoSize = true;
             this.HRTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HRTitleLabel.Location = new System.Drawing.Point(174, 35);
+            this.HRTitleLabel.Location = new System.Drawing.Point(180, 36);
             this.HRTitleLabel.Name = "HRTitleLabel";
             this.HRTitleLabel.Size = new System.Drawing.Size(376, 24);
-            this.HRTitleLabel.TabIndex = 0;
+            this.HRTitleLabel.TabIndex = 6;
             this.HRTitleLabel.Text = "WELCOME TO HR HELP DESK KIOSK!";
             // 
             // signUpButton
             // 
-            this.signUpButton.Location = new System.Drawing.Point(178, 85);
+            this.signUpButton.Location = new System.Drawing.Point(184, 86);
             this.signUpButton.Name = "signUpButton";
             this.signUpButton.Size = new System.Drawing.Size(175, 23);
             this.signUpButton.TabIndex = 3;
@@ -58,7 +58,7 @@
             // 
             // loginButton
             // 
-            this.loginButton.Location = new System.Drawing.Point(375, 85);
+            this.loginButton.Location = new System.Drawing.Point(381, 86);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(175, 23);
             this.loginButton.TabIndex = 4;
@@ -73,7 +73,7 @@
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(518, 130);
+            this.exitButton.Location = new System.Drawing.Point(524, 131);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(175, 23);
             this.exitButton.TabIndex = 5;
