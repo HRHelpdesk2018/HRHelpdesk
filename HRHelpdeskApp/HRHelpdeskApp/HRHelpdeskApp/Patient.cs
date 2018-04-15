@@ -46,18 +46,81 @@ namespace HRHelpdeskApp
             set { _username = value; }
         }
 
+        // Password property
         public string Password
         {
             get { return _password; }
             set { _password = value; }
         }
 
+        // First Name property
         public string FirstName
         {
             get { return _firstName; }
             set { _firstName = value; }
         }
 
-        public string 
+        // Middle Initial property
+        public string MiddleInitial
+        {
+            get { return _middleInitial; }
+            set { _middleInitial = value; }
+        }
+
+        // Last Name property
+        public string LastName
+        {
+            get { return _lastName; }
+            set { _lastName = value; }
+        }
+
+        // Street Address property
+        public string Address
+        {
+            get { return _address; }
+            set { _address = value; }
+        }
+
+        // City property
+        public string City
+        {
+            get { return _city; }
+            set { _city = value; }
+        }
+
+        // State property
+        public string State
+        {
+            get { return _state; }
+            set { _state = value; }
+        }
+
+        // Zip property
+        public double Zip
+        {
+            get { return _zip; }
+            set { _zip = value; }
+        }
+
+        // Home Phone property
+        public double HomePhone
+        {
+            get { return _homePhone; }
+            set { _homePhone = value; }
+        }
+
+        // Cellphone property
+        public double Cellphone
+        {
+            get { return _cellphone; }
+            set { _cellphone = value; }
+        }
+
+        // Email property
+        public string Email
+        {
+            get { return _email; }
+            set { _email = value; }
+        }
     }
 }
