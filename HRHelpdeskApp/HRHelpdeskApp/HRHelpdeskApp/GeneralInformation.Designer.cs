@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GeneralInformation));
-            this.label28 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
             this.ageTextBox = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.zipTextBox = new System.Windows.Forms.TextBox();
@@ -49,16 +44,6 @@
             this.stateTextBox = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.cityTextBox = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
@@ -90,52 +75,11 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox3.SuspendLayout();
+            this.saveButton = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(256, 146);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(35, 13);
-            this.label28.TabIndex = 26;
-            this.label28.Text = "State:";
-            // 
-            // textBox21
-            // 
-            this.textBox21.Location = new System.Drawing.Point(60, 143);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(156, 20);
-            this.textBox21.TabIndex = 25;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(9, 146);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(27, 13);
-            this.label27.TabIndex = 24;
-            this.label27.Text = "City:";
-            // 
-            // textBox20
-            // 
-            this.textBox20.Location = new System.Drawing.Point(596, 113);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(43, 20);
-            this.textBox20.TabIndex = 23;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(548, 113);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(34, 13);
-            this.label26.TabIndex = 22;
-            this.label26.Text = "Suite:";
             // 
             // ageTextBox
             // 
@@ -255,100 +199,6 @@
             this.cityTextBox.Name = "cityTextBox";
             this.cityTextBox.Size = new System.Drawing.Size(156, 20);
             this.cityTextBox.TabIndex = 24;
-            // 
-            // textBox23
-            // 
-            this.textBox23.Location = new System.Drawing.Point(522, 147);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(154, 20);
-            this.textBox23.TabIndex = 37;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(456, 150);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(53, 13);
-            this.label29.TabIndex = 36;
-            this.label29.Text = "Zip Code:";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.textBox23);
-            this.groupBox3.Controls.Add(this.label29);
-            this.groupBox3.Controls.Add(this.textBox22);
-            this.groupBox3.Controls.Add(this.label28);
-            this.groupBox3.Controls.Add(this.textBox21);
-            this.groupBox3.Controls.Add(this.label27);
-            this.groupBox3.Controls.Add(this.textBox20);
-            this.groupBox3.Controls.Add(this.label26);
-            this.groupBox3.Controls.Add(this.textBox19);
-            this.groupBox3.Controls.Add(this.label25);
-            this.groupBox3.Controls.Add(this.textBox18);
-            this.groupBox3.Controls.Add(this.label24);
-            this.groupBox3.Controls.Add(this.label23);
-            this.groupBox3.Controls.Add(this.textBox17);
-            this.groupBox3.Location = new System.Drawing.Point(21, 522);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(798, 275);
-            this.groupBox3.TabIndex = 13;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Primary Care Inormation:";
-            // 
-            // textBox22
-            // 
-            this.textBox22.Location = new System.Drawing.Point(297, 143);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(137, 20);
-            this.textBox22.TabIndex = 27;
-            // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(72, 106);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(446, 20);
-            this.textBox19.TabIndex = 21;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(9, 106);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(48, 13);
-            this.label25.TabIndex = 20;
-            this.label25.Text = "Address:";
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(81, 71);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(483, 20);
-            this.textBox18.TabIndex = 3;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(9, 71);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(66, 13);
-            this.label24.TabIndex = 2;
-            this.label24.Text = "Clinic Name:";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(6, 36);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(160, 13);
-            this.label23.TabIndex = 1;
-            this.label23.Text = "Name of Primary Care Physician:";
-            // 
-            // textBox17
-            // 
-            this.textBox17.Location = new System.Drawing.Point(172, 36);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(528, 20);
-            this.textBox17.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -646,9 +496,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(185, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(354, 25);
+            this.label1.Size = new System.Drawing.Size(355, 25);
             this.label1.TabIndex = 8;
-            this.label1.Text = "PATIENT REGISTRATION FORM";
+            this.label1.Text = "GENERAL INFORMATION FORM";
             // 
             // pictureBox1
             // 
@@ -660,12 +510,22 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // saveButton
+            // 
+            this.saveButton.Location = new System.Drawing.Point(617, 554);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(277, 66);
+            this.saveButton.TabIndex = 13;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            // 
             // GeneralInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(905, 749);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.saveButton);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
@@ -674,8 +534,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "GeneralInformation";
             this.Text = "GeneralInformation";
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -686,12 +544,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox ageTextBox;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox zipTextBox;
@@ -707,16 +559,6 @@
         private System.Windows.Forms.TextBox stateTextBox;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox cityTextBox;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label15;
@@ -748,5 +590,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button saveButton;
     }
 }

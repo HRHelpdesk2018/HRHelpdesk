@@ -22,6 +22,9 @@ namespace HRHelpdeskApp
         private void loginButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Welcome! ");
+            FormSelection screen = new FormSelection();
+            this.Hide();
+            screen.ShowDialog();
         }
 
         private void newAccountButton_Click(object sender, EventArgs e)

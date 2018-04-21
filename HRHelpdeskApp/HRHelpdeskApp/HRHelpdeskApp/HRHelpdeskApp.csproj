@@ -52,6 +52,12 @@
     <Compile Include="CreateAccount.Designer.cs">
       <DependentUpon>CreateAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelection.Designer.cs">
+      <DependentUpon>FormSelection.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeneralInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Mainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelection.resx">
+      <DependentUpon>FormSelection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GeneralInformation.resx">
       <DependentUpon>GeneralInformation.cs</DependentUpon>

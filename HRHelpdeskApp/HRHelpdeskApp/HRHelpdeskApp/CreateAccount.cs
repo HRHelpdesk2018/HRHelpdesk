@@ -64,17 +64,12 @@ namespace HRHelpdeskApp
             }
             else if (password.Length < 8)
             {
-                MessageBox.Show("Enter up to 8 characters with an uppercase letter and a number ");
+                MessageBox.Show("Enter up to 8 characters with an uppercase letter and a number for the password ");
             }
             else if (reenterPasswordTextBox.Text != passwordTextBox.Text)
             {
                 MessageBox.Show("Passwords must match and meet requirements ");
             }
-
-            MessageBox.Show("Would you like to create this account? ",
-            "Important ",
-            MessageBoxButtons.YesNoCancel,
-            MessageBoxIcon.Warning);
         }
 
         private void memberButton_Click(object sender, EventArgs e)

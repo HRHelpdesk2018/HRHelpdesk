@@ -16,5 +16,12 @@ namespace HRHelpdeskApp
         {
             InitializeComponent();
         }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            FormSelection screen = new FormSelection();
+            this.Hide();
+            screen.ShowDialog();
+        }
     }
 }
