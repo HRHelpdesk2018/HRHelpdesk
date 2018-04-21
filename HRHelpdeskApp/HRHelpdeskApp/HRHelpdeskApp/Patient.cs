@@ -33,9 +33,9 @@ namespace HRHelpdeskApp
             _address = "";
             _city = "";
             _state = "";
-            _zip = "";
-            _homePhone = "";
-            _cellphone = "";
+            //_zip = ;
+            //_homePhone = "";
+            // _cellphone = "";
             _email = "";
         }
 
