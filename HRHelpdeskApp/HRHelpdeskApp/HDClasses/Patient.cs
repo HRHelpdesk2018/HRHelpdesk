@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HRHelpdeskApp
+namespace HDClasses
 {
     class Patient
     {
@@ -33,9 +33,9 @@ namespace HRHelpdeskApp
             _address = "";
             _city = "";
             _state = "";
-            //_zip = ;
-            //_homePhone = "";
-            // _cellphone = "";
+            _zip = "" ;
+            _homePhone = "";
+            _cellphone = "";
             _email = "";
         }
 

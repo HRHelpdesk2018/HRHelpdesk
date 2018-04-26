@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace HDClasses
 {
-    public class Class1
+    public class Login
     {
+        public string _username { get; set; }
+        public string _password { get; set; }
     }
 }
