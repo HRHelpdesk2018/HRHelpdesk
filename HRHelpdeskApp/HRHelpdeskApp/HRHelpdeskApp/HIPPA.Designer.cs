@@ -79,6 +79,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.saveButton = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -109,7 +110,7 @@
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.radioButton3);
-            this.groupBox3.Location = new System.Drawing.Point(51, 467);
+            this.groupBox3.Location = new System.Drawing.Point(49, 428);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(705, 278);
             this.groupBox3.TabIndex = 73;
@@ -426,7 +427,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(51, 134);
+            this.groupBox1.Location = new System.Drawing.Point(49, 106);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(705, 105);
             this.groupBox1.TabIndex = 71;
@@ -558,7 +559,7 @@
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(51, 268);
+            this.groupBox2.Location = new System.Drawing.Point(49, 229);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(703, 193);
             this.groupBox2.TabIndex = 72;
@@ -574,11 +575,21 @@
             this.label7.TabIndex = 3;
             this.label7.Text = "Start Date:";
             // 
+            // saveButton
+            // 
+            this.saveButton.Location = new System.Drawing.Point(329, 712);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(134, 36);
+            this.saveButton.TabIndex = 78;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = true;
+            // 
             // HIPPA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 749);
+            this.Controls.Add(this.saveButton);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox4);
@@ -658,5 +669,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button saveButton;
     }
 }

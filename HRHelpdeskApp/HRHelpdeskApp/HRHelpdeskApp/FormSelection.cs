@@ -31,6 +31,13 @@ namespace HRHelpdeskApp
             screen.ShowDialog();
         }
 
+        private void hippaButton_Click(object sender, EventArgs e)
+        {
+            HIPPA screen = new HIPPA();
+            this.Hide();
+            screen.ShowDialog();
+        }
+
         private void logOutButton_Click(object sender, EventArgs e)
         {
             this.Close();

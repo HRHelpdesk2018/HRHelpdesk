@@ -31,6 +31,7 @@
             this.generalInformationButton = new System.Windows.Forms.Button();
             this.medicalInformationForm = new System.Windows.Forms.Button();
             this.logOutButton = new System.Windows.Forms.Button();
+            this.hippaButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // generalInformationButton
@@ -45,7 +46,7 @@
             // 
             // medicalInformationForm
             // 
-            this.medicalInformationForm.Location = new System.Drawing.Point(322, 62);
+            this.medicalInformationForm.Location = new System.Drawing.Point(341, 62);
             this.medicalInformationForm.Name = "medicalInformationForm";
             this.medicalInformationForm.Size = new System.Drawing.Size(141, 114);
             this.medicalInformationForm.TabIndex = 1;
@@ -55,7 +56,7 @@
             // 
             // logOutButton
             // 
-            this.logOutButton.Location = new System.Drawing.Point(297, 190);
+            this.logOutButton.Location = new System.Drawing.Point(317, 190);
             this.logOutButton.Name = "logOutButton";
             this.logOutButton.Size = new System.Drawing.Size(194, 60);
             this.logOutButton.TabIndex = 2;
@@ -63,11 +64,22 @@
             this.logOutButton.UseVisualStyleBackColor = true;
             this.logOutButton.Click += new System.EventHandler(this.logOutButton_Click);
             // 
+            // hippaButton
+            // 
+            this.hippaButton.Location = new System.Drawing.Point(629, 62);
+            this.hippaButton.Name = "hippaButton";
+            this.hippaButton.Size = new System.Drawing.Size(141, 114);
+            this.hippaButton.TabIndex = 3;
+            this.hippaButton.Text = "Click here to open HIPPA Form";
+            this.hippaButton.UseVisualStyleBackColor = true;
+            this.hippaButton.Click += new System.EventHandler(this.hippaButton_Click);
+            // 
             // FormSelection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(839, 262);
+            this.Controls.Add(this.hippaButton);
             this.Controls.Add(this.logOutButton);
             this.Controls.Add(this.medicalInformationForm);
             this.Controls.Add(this.generalInformationButton);
@@ -82,5 +94,6 @@
         private System.Windows.Forms.Button generalInformationButton;
         private System.Windows.Forms.Button medicalInformationForm;
         private System.Windows.Forms.Button logOutButton;
+        private System.Windows.Forms.Button hippaButton;
     }
 }
