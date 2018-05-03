@@ -35,7 +35,7 @@
             // 
             // generalInformationButton
             // 
-            this.generalInformationButton.Location = new System.Drawing.Point(180, 62);
+            this.generalInformationButton.Location = new System.Drawing.Point(68, 62);
             this.generalInformationButton.Name = "generalInformationButton";
             this.generalInformationButton.Size = new System.Drawing.Size(141, 114);
             this.generalInformationButton.TabIndex = 0;
@@ -45,7 +45,7 @@
             // 
             // medicalInformationForm
             // 
-            this.medicalInformationForm.Location = new System.Drawing.Point(452, 62);
+            this.medicalInformationForm.Location = new System.Drawing.Point(322, 62);
             this.medicalInformationForm.Name = "medicalInformationForm";
             this.medicalInformationForm.Size = new System.Drawing.Size(141, 114);
             this.medicalInformationForm.TabIndex = 1;
@@ -55,7 +55,7 @@
             // 
             // logOutButton
             // 
-            this.logOutButton.Location = new System.Drawing.Point(609, 178);
+            this.logOutButton.Location = new System.Drawing.Point(297, 190);
             this.logOutButton.Name = "logOutButton";
             this.logOutButton.Size = new System.Drawing.Size(194, 60);
             this.logOutButton.TabIndex = 2;

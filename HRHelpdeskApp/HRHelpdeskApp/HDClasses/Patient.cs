@@ -33,10 +33,10 @@ namespace HDClasses
             _address = "";
             _city = "";
             _state = "";
-            _zip = "" ;
-            _homePhone = "";
-            _cellphone = "";
-            _email = "";
+            //_zip = "" ;
+            //_homePhone = "";
+            //_cellphone = "";
+            //_email = "";
         }
 
         // Username Property

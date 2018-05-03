@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRHelpdeskApp", "HRHelpdesk
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HDClasses", "HDClasses\HDClasses.csproj", "{B152D955-7227-47F8-B19A-8B14EE4B175F}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Helpdesk", "Helpdesk\Helpdesk.vdproj", "{0C44A22D-CD46-4A05-9618-6CDB7467EE9B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,8 @@ Global
 		{B152D955-7227-47F8-B19A-8B14EE4B175F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B152D955-7227-47F8-B19A-8B14EE4B175F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B152D955-7227-47F8-B19A-8B14EE4B175F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C44A22D-CD46-4A05-9618-6CDB7467EE9B}.Debug|Any CPU.ActiveCfg = Debug
+		{0C44A22D-CD46-4A05-9618-6CDB7467EE9B}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

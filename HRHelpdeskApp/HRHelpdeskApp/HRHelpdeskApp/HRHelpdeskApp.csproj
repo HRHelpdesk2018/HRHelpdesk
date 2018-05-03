@@ -79,6 +79,12 @@
     <Compile Include="GeneralInformation.Designer.cs">
       <DependentUpon>GeneralInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="HIPPA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HIPPA.Designer.cs">
+      <DependentUpon>HIPPA.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GeneralInformation.resx">
       <DependentUpon>GeneralInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HIPPA.resx">
+      <DependentUpon>HIPPA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

@@ -22,5 +22,19 @@ namespace HDClasses
         private string _cellphone;      // The user's cell phone number
         private string _email;          // The user's email address
 
+        // No arg constructor
+        public User()
+        { }
+
+        // Constructor with parameters 
+        public User(string userName, string lastName, string firstName, string middleInitial)
+        {
+            _username = userName;
+            _lastName = lastName;
+            _firstName = firstName;
+            _middleInitial = middleInitial; 
+        }
+
+
     }
 }
