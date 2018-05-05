@@ -36,7 +36,7 @@
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(412, 207);
+            this.exitButton.Location = new System.Drawing.Point(213, 207);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(175, 54);
             this.exitButton.TabIndex = 9;
@@ -46,7 +46,7 @@
             // 
             // loginButton
             // 
-            this.loginButton.Location = new System.Drawing.Point(341, 85);
+            this.loginButton.Location = new System.Drawing.Point(342, 101);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(175, 53);
             this.loginButton.TabIndex = 8;
@@ -56,7 +56,7 @@
             // 
             // signUpButton
             // 
-            this.signUpButton.Location = new System.Drawing.Point(92, 85);
+            this.signUpButton.Location = new System.Drawing.Point(92, 101);
             this.signUpButton.Name = "signUpButton";
             this.signUpButton.Size = new System.Drawing.Size(175, 53);
             this.signUpButton.TabIndex = 7;
@@ -68,22 +68,23 @@
             // 
             this.HRTitleLabel.AutoSize = true;
             this.HRTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HRTitleLabel.Location = new System.Drawing.Point(88, 33);
+            this.HRTitleLabel.Location = new System.Drawing.Point(123, 36);
             this.HRTitleLabel.Name = "HRTitleLabel";
             this.HRTitleLabel.Size = new System.Drawing.Size(376, 24);
             this.HRTitleLabel.TabIndex = 6;
             this.HRTitleLabel.Text = "WELCOME TO HR HELP DESK KIOSK!";
             // 
-            // Form1
+            // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(626, 273);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.signUpButton);
             this.Controls.Add(this.HRTitleLabel);
-            this.Name = "Form1";
+            this.Name = "Mainform";
             this.Text = "HR Helpdesk";
             this.ResumeLayout(false);
             this.PerformLayout();

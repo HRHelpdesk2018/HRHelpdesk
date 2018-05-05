@@ -55,7 +55,7 @@
             this.memberButton.Location = new System.Drawing.Point(315, 262);
             this.memberButton.Name = "memberButton";
             this.memberButton.Size = new System.Drawing.Size(200, 49);
-            this.memberButton.TabIndex = 23;
+            this.memberButton.TabIndex = 20;
             this.memberButton.Text = "Sign In";
             this.memberButton.UseVisualStyleBackColor = true;
             this.memberButton.Click += new System.EventHandler(this.memberButton_Click);
@@ -65,7 +65,7 @@
             this.CancelButton.Location = new System.Drawing.Point(364, 172);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(200, 45);
-            this.CancelButton.TabIndex = 22;
+            this.CancelButton.TabIndex = 19;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
@@ -75,7 +75,7 @@
             this.reenterPasswordTextBox.Location = new System.Drawing.Point(217, 129);
             this.reenterPasswordTextBox.Name = "reenterPasswordTextBox";
             this.reenterPasswordTextBox.Size = new System.Drawing.Size(201, 20);
-            this.reenterPasswordTextBox.TabIndex = 21;
+            this.reenterPasswordTextBox.TabIndex = 17;
             // 
             // reenterPasswordLabel
             // 
@@ -112,7 +112,7 @@
             this.createButton.Location = new System.Drawing.Point(94, 172);
             this.createButton.Name = "createButton";
             this.createButton.Size = new System.Drawing.Size(200, 45);
-            this.createButton.TabIndex = 17;
+            this.createButton.TabIndex = 18;
             this.createButton.Text = "Create";
             this.createButton.UseVisualStyleBackColor = true;
             this.createButton.Click += new System.EventHandler(this.createButton_Click);
@@ -135,6 +135,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(721, 323);
             this.Controls.Add(this.memberLabel);
             this.Controls.Add(this.memberButton);
