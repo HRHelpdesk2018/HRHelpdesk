@@ -6,121 +6,212 @@ using System.Threading.Tasks;
 
 namespace HDClasses
 {
-    class Patient
+    public class Patient : User
     {
         // Fields
-        private string _username;       // The patient's username
-        private string _password;       // The password for the username
-        private string _firstName;      // The patient's first name
-        private string _middleInitial;  // The patient's middle initial
-        private string _lastName;       // The patient's last name
-        private string _address;        // The patient's street address
-        private string _city;           // The patient's city
-        private string _state;          // The patient's state
-        private double _zip;            // The patient's zip code
-        private double _homePhone;      // The patient's home phone number
-        private double _cellphone;      // The patient's cell phone number
-        private string _email;          // The patient's email address
+        private string _firstName;          // The patient's first name
+        private string _middleInitial;      // The patient's middle initial
+        private string _lastName;           // The patient's last name
+        private string _ssn;                // The patient's social security number
+        private string _sex;                // The patient's gender
+        private string _maritalStatus;      // The patient's marital status
+        private string _age;                // The patient's age
+        private string _dob;                // The patient's date of birth
+        private string _address;            // The patient's street address
+        private string _apt;                // The patient's apartment number
+        private string _city;               // The patient's city
+        private string _state;              // The patient's state
+        private string _zip;                // The patient's zip code
+        private string _homePhone;          // The patient's home phone number
+        private string _cellphone;          // The patient's cell phone number
+        private string _email;              // The patient's email address
+        private string _primaryIns;         // The patient's primary insurance provider
+        private string _primaryPhone;       // The patient's primary insurance provider's phone number
+        private string _primaryPolicy;      // The patient's primary insurance provider's policy number
+        private string _primaryCity;        // The patient's primary insurance provider's city
+        private string _primaryState;       // The patient's primary insurance provider's state
+        private string _secondaryIns;       // The patient's primary insurance provider
+        private string _secondaryPhone;     // The patient's primary insurance provider's phone number
+        private string _secondaryPolicy;    // The patient's primary insurance provider's policy number
+        private string _secondaryCity;      // The patient's primary insurance provider's city
+        private string _secondaryState;     // The patient's primary insurance provider's state
 
-        // Constructors
+
+        // No arg constructor
         public Patient()
         {
-            _username = "";
-            _password = "";
-            _firstName = "";
-            _middleInitial = "";
-            _lastName = "";
-            _address = "";
-            _city = "";
-            _state = "";
-            //_zip = "" ;
-            //_homePhone = "";
-            //_cellphone = "";
-            //_email = "";
         }
 
-        // Username Property
-        public string Username
+        // Constructor with parameters 
+        public Patient(string userName, string lastName, string firstName, string middleInitial,
+            string ssn, string gender, string maritalStatus, string age, string dob, string streetAddress,
+            string city, string state, string zip, string homePhone, string cellphone, string email,
+            string primaryIns, string primaryPhone, string primaryPolicy, string primaryCity, 
+            string primaryState, string secondaryIns, string secondaryPhone, string secondaryPolicy,
+            string secondaryCity, string secondaryState)
         {
-            get { return _username; }
-            set { _username = value; }
+            _lastName = lastName;
+            _firstName = firstName;
+            _middleInitial = middleInitial;
+            _ssn = ssn;
+            _sex = gender;
+            _maritalStatus = maritalStatus;
+            _age = age;
+            _dob = dob;
+            _address = streetAddress;
+            _city = city;
+            _state = state;
+            _zip = zip;
+            _homePhone = homePhone;
+            _cellphone = cellphone;
+            _email = email;
+            _primaryIns = primaryIns;
+            _primaryPhone = primaryPhone;
+            _primaryPolicy = primaryPolicy;
+            _primaryCity = primaryCity;
+            _primaryState = primaryState;
+            _secondaryIns = secondaryIns;
+            _secondaryPolicy = secondaryPolicy;
+            _secondaryCity = secondaryCity;
+            _secondaryState = secondaryState;
         }
 
-        // Password property
-        public string Password
-        {
-            get { return _password; }
-            set { _password = value; }
-        }
-
-        // First Name property
-        public string FirstName
-        {
-            get { return _firstName; }
-            set { _firstName = value; }
-        }
-
-        // Middle Initial property
-        public string MiddleInitial
-        {
-            get { return _middleInitial; }
-            set { _middleInitial = value; }
-        }
-
-        // Last Name property
-        public string LastName
+        // Getters and Setters
+        public string lastName
         {
             get { return _lastName; }
             set { _lastName = value; }
         }
 
-        // Street Address property
-        public string Address
+        public string firstName
+        {
+            get { return _firstName; }
+            set { _firstName = value; }
+        }
+
+        public string middleInitial
+        {
+            get { return _middleInitial; }
+            set { _middleInitial = value; }
+        }
+
+        public string ssn
+        {
+            get { return _ssn; }
+            set { _ssn = value; }
+        }
+
+        public string gender
+        {
+            get { return _sex; }
+            set { _sex = value; }
+        }
+
+        public string maritalStatus
+        {
+            get { return _maritalStatus; }
+            set { _maritalStatus = value; }
+        }
+
+        public string age
+        {
+            get { return _age; }
+            set { _age = value; }
+        }
+
+        public string dob
+        {
+            get { return _dob; }
+            set { _dob = value; }
+        }
+
+        public string streetAddress
         {
             get { return _address; }
             set { _address = value; }
         }
 
-        // City property
-        public string City
+        public string city
         {
             get { return _city; }
             set { _city = value; }
         }
 
-        // State property
-        public string State
+        public string state
         {
             get { return _state; }
             set { _state = value; }
         }
 
-        // Zip property
-        public double Zip
+        public string zip
         {
             get { return _zip; }
             set { _zip = value; }
         }
 
-        // Home Phone property
-        public double HomePhone
+        public string homePhone
         {
             get { return _homePhone; }
             set { _homePhone = value; }
         }
 
-        // Cellphone property
-        public double Cellphone
+        public string cellphone
         {
             get { return _cellphone; }
             set { _cellphone = value; }
         }
 
-        // Email property
-        public string Email
+        public string email
         {
             get { return _email; }
             set { _email = value; }
         }
+
+        public string primaryIns
+        {
+            get { return _primaryIns;}
+            set { _primaryIns = value; }
+        }         
+
+        public string primaryPhone
+        {
+            get { return _primaryPhone; }
+            set { _primaryPhone = value; }
+        }
+
+        public string primaryPolicy
+        {
+            get { return _primaryPolicy; }
+            set { _primaryPolicy = value; }
+        }
+             
+        public string primaryCity
+        {
+            get { return _primaryCity; }
+            set { _primaryCity = value; }
+        }
+        
+        public string primaryState
+        {
+            get { return _primaryState; }
+            set { _primaryState = value; }
+        }
+       
+        public string secondaryIns
+        {
+            get { return _secondaryIns; }
+            set { _secondaryIns = value; }
+        }
+            
+        public string secondaryPhone
+        {
+            get { return _secondaryPhone; }
+            set { _secondaryPhone = value; }
+        }
+             
+        public string _secondaryPolicy;  
+        public string _secondaryCity;    
+        public string _secondaryState;   
     }
 }
+
