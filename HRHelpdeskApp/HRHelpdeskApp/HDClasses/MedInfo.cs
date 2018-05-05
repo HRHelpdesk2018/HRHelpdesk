@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HDClasses
 {
-    class MedInfo
-    {
-    }
+    //class MedInfo : Patient
+    //{
+    //}
 }

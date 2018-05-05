@@ -45,8 +45,8 @@ namespace HDClasses
         // Constructor with parameters 
         public Patient(string userName, string lastName, string firstName, string middleInitial,
             string ssn, string gender, string maritalStatus, string age, string dob, string streetAddress,
-            string city, string state, string zip, string homePhone, string cellphone, string email,
-            string primaryIns, string primaryPhone, string primaryPolicy, string primaryCity, 
+            string apt, string city, string state, string zip, string homePhone, string cellphone, string email,
+            string primaryIns, string primaryPhone, string primaryPolicy, string primaryCity,
             string primaryState, string secondaryIns, string secondaryPhone, string secondaryPolicy,
             string secondaryCity, string secondaryState)
         {
@@ -59,6 +59,7 @@ namespace HDClasses
             _age = age;
             _dob = dob;
             _address = streetAddress;
+            _apt = apt;
             _city = city;
             _state = state;
             _zip = zip;
@@ -131,6 +132,12 @@ namespace HDClasses
             set { _address = value; }
         }
 
+        public string apt
+        {
+            get { return _apt; }
+            set { _apt = value; }
+        }
+
         public string city
         {
             get { return _city; }
@@ -169,9 +176,9 @@ namespace HDClasses
 
         public string primaryIns
         {
-            get { return _primaryIns;}
+            get { return _primaryIns; }
             set { _primaryIns = value; }
-        }         
+        }
 
         public string primaryPhone
         {
@@ -184,34 +191,48 @@ namespace HDClasses
             get { return _primaryPolicy; }
             set { _primaryPolicy = value; }
         }
-             
+
         public string primaryCity
         {
             get { return _primaryCity; }
             set { _primaryCity = value; }
         }
-        
+
         public string primaryState
         {
             get { return _primaryState; }
             set { _primaryState = value; }
         }
-       
+
         public string secondaryIns
         {
             get { return _secondaryIns; }
             set { _secondaryIns = value; }
         }
-            
+
         public string secondaryPhone
         {
             get { return _secondaryPhone; }
             set { _secondaryPhone = value; }
         }
-             
-        public string _secondaryPolicy;  
-        public string _secondaryCity;    
-        public string _secondaryState;   
+
+        public string secondaryPolicy
+        {
+            get { return _secondaryPolicy; }
+            set { _secondaryPolicy = value; }
+        }
+
+        public string secondaryCity
+        {
+            get { return _secondaryCity; }
+            set { _secondaryCity = value; }
+        }
+
+        public string secondaryState
+        {
+            get { return _secondaryState; }
+            set { _secondaryState = value; }
+        }
     }
 }
 
