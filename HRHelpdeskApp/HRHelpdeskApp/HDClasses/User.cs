@@ -19,19 +19,19 @@ namespace HDClasses
         }
 
         // Constructor with parameters 
-        public User(string userName, string password)
+        public User(string Username, string Password)
         {
-            _username = userName;
-            _password = password;
+            _username = Username;
+            _password = Password;
         }
 
-        public string userName
+        public string Username
         {
             get { return _username; }
             set { _username = value; }
         }
 
-        public string password
+        public string Password
         {
             get { return _password; }
             set { _password = value; }

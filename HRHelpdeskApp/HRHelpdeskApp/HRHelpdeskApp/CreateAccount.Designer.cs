@@ -58,7 +58,7 @@
             this.memberButton.TabIndex = 20;
             this.memberButton.Text = "Sign In";
             this.memberButton.UseVisualStyleBackColor = true;
-            this.memberButton.Click += new System.EventHandler(this.memberButton_Click);
+            this.memberButton.Click += new System.EventHandler(this.MemberButton_Click);
             // 
             // CancelButton
             // 
@@ -115,7 +115,7 @@
             this.createButton.TabIndex = 18;
             this.createButton.Text = "Create";
             this.createButton.UseVisualStyleBackColor = true;
-            this.createButton.Click += new System.EventHandler(this.createButton_Click);
+            this.createButton.Click += new System.EventHandler(this.CreateButton_Click);
             // 
             // passwordTextBox
             // 
