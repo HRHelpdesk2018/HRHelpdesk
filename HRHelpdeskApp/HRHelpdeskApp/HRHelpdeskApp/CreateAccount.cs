@@ -18,7 +18,7 @@ namespace HRHelpdeskApp
         string username;
         string password;
         string reenterpassword;
-        bool create;
+        //bool create;
 
         public CreateAccount()
         {
@@ -55,37 +55,37 @@ namespace HRHelpdeskApp
         {
             username = usernameTextBox.Text;
             password = passwordTextBox.Text;
-            reenterpassword = reenterPasswordTextBox.Text; 
+            reenterpassword = reenterPasswordTextBox.Text;
 
-            //// validates for insufficient fields
-            //if (usernameTextBox.Text == "")
-            //{
-            //    MessageBox.Show("Enter a username ");
-            //}
-            //else if (userName.Length < 5)
-            //{
-            //    MessageBox.Show("Enter up to 5 characters as a username ");
-            //}
-            //if (passwordTextBox.Text == "")
-            //{
-            //    MessageBox.Show("Enter a password that contains up to 8 characters with an uppercase letter and a number ");
-            //}
-            //else if (password.Length < 8)
-            //{
-            //    MessageBox.Show("Enter up to 8 characters with an uppercase letter and a number for the password ");
-            //}
-            //else if (reenterPasswordTextBox.Text != passwordTextBox.Text)
-            //{
-            //    MessageBox.Show("Passwords must match and meet requirements ");
-            //}
-
-            HDClasses.SQLCommands cmd = new SQLCommands();
-            create = cmd.UserDataSave (username, password);
-
-            if (create == true)
+            // validates for insufficient fields
+            if (usernameTextBox.Text == "")
             {
-                
+                MessageBox.Show("Enter a username ");
             }
+            else if (username.Length < 5)
+            {
+                MessageBox.Show("Enter up to 5 characters as a username ");
+            }
+            if (passwordTextBox.Text == "")
+            {
+                MessageBox.Show("Enter a password that contains up to 8 characters with an uppercase letter and a number ");
+            }
+            else if (password.Length < 8)
+            {
+                MessageBox.Show("Enter up to 8 characters with an uppercase letter and a number for the password ");
+            }
+            else if (reenterPasswordTextBox.Text != passwordTextBox.Text)
+            {
+                MessageBox.Show("Passwords must match and meet requirements ");
+            }
+
+            //    HDClasses.SQLCommands cmd = new SQLCommands();
+            //    create = cmd.UserDataSave (username, password);
+
+            //    if (create == true)
+            //    {
+
+            //    }
         }
 
         private void MemberButton_Click(object sender, EventArgs e)

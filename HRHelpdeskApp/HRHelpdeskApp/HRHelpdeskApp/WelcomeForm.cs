@@ -17,34 +17,23 @@ namespace HRHelpdeskApp
             InitializeComponent();
         }
 
-        CreateAccount signup = new CreateAccount();
         private void signUpButton_Click(object sender, EventArgs e)
         {
+            CreateAccount signup = new CreateAccount();
+
             signup.ShowDialog();
         }
 
-        Login loginscreen = new Login();
         private void loginButton_Click(object sender, EventArgs e)
         {
-            loginscreen.ShowDialog();
-        }
+            Login loginscreen = new Login();
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if (HRTitleLabel.Left < this.Width)
-            {
-                HRTitleLabel.Left = HRTitleLabel.Left + 4;
-            }
-            else
-            {
-                HRTitleLabel.Left = 8;
-            }
+            loginscreen.ShowDialog();
         }
 
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
     }
 }
