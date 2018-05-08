@@ -92,12 +92,6 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mainform.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Mainform.cs</DependentUpon>
-    </Compile>
     <Compile Include="MedicalInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,11 +100,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WelcomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelcomeForm.Designer.cs">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CreateAccount.resx">
       <DependentUpon>CreateAccount.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Mainform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSelection.resx">
       <DependentUpon>FormSelection.cs</DependentUpon>
@@ -123,9 +120,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Mainform.resx">
-      <DependentUpon>Mainform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MedicalInformation.resx">
       <DependentUpon>MedicalInformation.cs</DependentUpon>
@@ -140,6 +134,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="WelcomeForm.resx">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

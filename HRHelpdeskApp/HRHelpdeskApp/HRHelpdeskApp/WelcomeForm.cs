@@ -7,15 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using HDClasses;
-using System.Data.SqlClient;
 
 namespace HRHelpdeskApp
 {
-    public partial class Mainform : Form
+    public partial class WelcomeForm : Form
     {
-        public Mainform()
+        public WelcomeForm()
         {
             InitializeComponent();
         }
@@ -48,5 +45,6 @@ namespace HRHelpdeskApp
         {
             this.Close();
         }
+
     }
 }
