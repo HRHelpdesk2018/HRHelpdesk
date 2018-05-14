@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HDClasses
 {
-    public abstract class User
+    public class Users
     {
         // Fields
         private string _username;       // The user's username
@@ -14,12 +14,12 @@ namespace HDClasses
       
 
         // No arg constructor
-        public User()
+        public Users()
         {
         }
 
         // Constructor with parameters 
-        public User(string Username, string Password)
+        public Users(string Username, string Password)
         {
             _username = Username;
             _password = Password;

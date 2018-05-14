@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HDClasses
 {
-    public class Patient : User
+    public class Patient : Users
     {
         // Fields
         private string _firstName;          // The patient's first name
@@ -16,7 +16,9 @@ namespace HDClasses
         private string _sex;                // The patient's gender
         private string _maritalStatus;      // The patient's marital status
         private string _age;                // The patient's age
-        private string _dob;                // The patient's date of birth
+        private string _dobMonth;           // The patient's month of birth
+        private string _dobDay;             // The patient's day of birth
+        private string _dobYear;            // The patient's year of birth
         private string _address;            // The patient's street address
         private string _apt;                // The patient's apartment number
         private string _city;               // The patient's city
@@ -25,6 +27,7 @@ namespace HDClasses
         private string _homePhone;          // The patient's home phone number
         private string _cellphone;          // The patient's cell phone number
         private string _email;              // The patient's email address
+        private string _learnAbout;         // How did the patient hear about us.
         private string _primaryIns;         // The patient's primary insurance provider
         private string _primaryPhone;       // The patient's primary insurance provider's phone number
         private string _primaryPolicy;      // The patient's primary insurance provider's policy number
@@ -43,192 +46,208 @@ namespace HDClasses
         }
 
         // Constructor with parameters 
-        public Patient(string userName, string lastName, string firstName, string middleInitial,
-            string ssn, string gender, string maritalStatus, string age, string dob, string streetAddress,
-            string apt, string city, string state, string zip, string homePhone, string cellphone, string email,
-            string primaryIns, string primaryPhone, string primaryPolicy, string primaryCity,
-            string primaryState, string secondaryIns, string secondaryPhone, string secondaryPolicy,
-            string secondaryCity, string secondaryState)
+        public Patient(string Username, string LastName, string FirstName, string MiddleInitial,
+            string SSN, string Gender, string MaritalStatus, string Age, string DOBMonth, string DOBDay, string DOBYear,
+            string StreetAddress, string Apt, string City, string State, string Zip, string HomePhone, string Cellphone, 
+            string Email, string LearnAbout, string PrimaryInsurance, string PrimaryPhone, string PrimaryPolicy, string PrimaryCity,
+            string PrimaryState, string SecondaryInsurance, string SecondaryPhone, string SecondaryPolicy,
+            string SecondaryCity, string SecondaryState)
         {
-            _lastName = lastName;
-            _firstName = firstName;
-            _middleInitial = middleInitial;
-            _ssn = ssn;
-            _sex = gender;
-            _maritalStatus = maritalStatus;
-            _age = age;
-            _dob = dob;
-            _address = streetAddress;
-            _apt = apt;
-            _city = city;
-            _state = state;
-            _zip = zip;
-            _homePhone = homePhone;
-            _cellphone = cellphone;
-            _email = email;
-            _primaryIns = primaryIns;
-            _primaryPhone = primaryPhone;
-            _primaryPolicy = primaryPolicy;
-            _primaryCity = primaryCity;
-            _primaryState = primaryState;
-            _secondaryIns = secondaryIns;
-            _secondaryPolicy = secondaryPolicy;
-            _secondaryCity = secondaryCity;
-            _secondaryState = secondaryState;
+           
+            _lastName = LastName;
+            _firstName = FirstName;
+            _middleInitial = MiddleInitial;
+            _ssn = SSN;
+            _sex = Gender;
+            _maritalStatus = MaritalStatus;
+            _age = Age;
+            _dobMonth = DOBMonth;
+            _dobDay = DOBDay;
+            _dobYear = DOBYear;
+            _address = StreetAddress;
+            _apt = Apt;
+            _city = City;
+            _state = State;
+            _zip = Zip;
+            _homePhone = HomePhone;
+            _cellphone = Cellphone;
+            _email = Email;
+            _learnAbout = LearnAbout;
+            _primaryIns = PrimaryInsurance;
+            _primaryPhone = PrimaryPhone;
+            _primaryPolicy = PrimaryPolicy;
+            _primaryCity = PrimaryCity;
+            _primaryState = PrimaryState;
+            _secondaryIns = SecondaryInsurance;
+            _secondaryPolicy = SecondaryPolicy;
+            _secondaryCity = SecondaryCity;
+            _secondaryState = SecondaryState;
         }
 
         // Getters and Setters
-        public string lastName
+        public string LastName
         {
             get { return _lastName; }
             set { _lastName = value; }
         }
 
-        public string firstName
+        public string FirstName
         {
             get { return _firstName; }
             set { _firstName = value; }
         }
 
-        public string middleInitial
+        public string MiddleInitial
         {
             get { return _middleInitial; }
             set { _middleInitial = value; }
         }
 
-        public string ssn
+        public string SSN
         {
             get { return _ssn; }
             set { _ssn = value; }
         }
 
-        public string gender
+        public string Gender
         {
             get { return _sex; }
             set { _sex = value; }
         }
 
-        public string maritalStatus
+        public string MaritalStatus
         {
             get { return _maritalStatus; }
             set { _maritalStatus = value; }
         }
 
-        public string age
+        public string Age
         {
             get { return _age; }
             set { _age = value; }
         }
 
-        public string dob
+        public string DOBMonth
         {
-            get { return _dob; }
-            set { _dob = value; }
+            get { return _dobMonth; }
+            set { _dobMonth = value; }
         }
 
-        public string streetAddress
+        public string DOBDay
+        {
+            get { return _dobDay; }
+            set { _dobDay = value; }
+        }
+
+        public string DOBYear
+        {
+            get { return _dobYear; }
+            set { _dobYear = value; }
+        }
+
+        public string StreetAddress
         {
             get { return _address; }
             set { _address = value; }
         }
 
-        public string apt
+        public string Apt
         {
             get { return _apt; }
             set { _apt = value; }
         }
 
-        public string city
+        public string City
         {
             get { return _city; }
             set { _city = value; }
         }
 
-        public string state
+        public string State
         {
             get { return _state; }
             set { _state = value; }
         }
 
-        public string zip
+        public string Zip
         {
             get { return _zip; }
             set { _zip = value; }
         }
 
-        public string homePhone
+        public string HomePhone
         {
             get { return _homePhone; }
             set { _homePhone = value; }
         }
 
-        public string cellphone
+        public string Cellphone
         {
             get { return _cellphone; }
             set { _cellphone = value; }
         }
 
-        public string email
+        public string Email
         {
             get { return _email; }
             set { _email = value; }
         }
 
-        public string primaryIns
+        public string PrimaryInsurance
         {
             get { return _primaryIns; }
             set { _primaryIns = value; }
         }
 
-        public string primaryPhone
+        public string PrimaryPhone
         {
             get { return _primaryPhone; }
             set { _primaryPhone = value; }
         }
 
-        public string primaryPolicy
+        public string PrimaryPolicy
         {
             get { return _primaryPolicy; }
             set { _primaryPolicy = value; }
         }
 
-        public string primaryCity
+        public string PrimaryCity
         {
             get { return _primaryCity; }
             set { _primaryCity = value; }
         }
 
-        public string primaryState
+        public string PrimaryState
         {
             get { return _primaryState; }
             set { _primaryState = value; }
         }
 
-        public string secondaryIns
+        public string SecondaryInsurance
         {
             get { return _secondaryIns; }
             set { _secondaryIns = value; }
         }
 
-        public string secondaryPhone
+        public string SecondaryPhone
         {
             get { return _secondaryPhone; }
             set { _secondaryPhone = value; }
         }
 
-        public string secondaryPolicy
+        public string SecondaryPolicy
         {
             get { return _secondaryPolicy; }
             set { _secondaryPolicy = value; }
         }
 
-        public string secondaryCity
+        public string SecondaryCity
         {
             get { return _secondaryCity; }
             set { _secondaryCity = value; }
         }
 
-        public string secondaryState
+        public string SecondaryState
         {
             get { return _secondaryState; }
             set { _secondaryState = value; }

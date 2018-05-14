@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using HDClasses;
 using System.Data.SqlClient;
+using System.Data.Sql;
 
 namespace HRHelpdeskApp
 {
@@ -18,11 +19,12 @@ namespace HRHelpdeskApp
         string username;
         string password;
         string reenterpassword;
-        //bool create;
+        bool create;
+        SQLCommands com = new SQLCommands();
 
         public CreateAccount()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private int NumUpperCase(string pass)
@@ -57,35 +59,58 @@ namespace HRHelpdeskApp
             password = passwordTextBox.Text;
             reenterpassword = reenterPasswordTextBox.Text;
 
-            // validates for insufficient fields
-            if (usernameTextBox.Text == "")
-            {
-                MessageBox.Show("Enter a username ");
-            }
-            else if (username.Length < 5)
-            {
-                MessageBox.Show("Enter up to 5 characters as a username ");
-            }
-            if (passwordTextBox.Text == "")
-            {
-                MessageBox.Show("Enter a password that contains up to 8 characters with an uppercase letter and a number ");
-            }
-            else if (password.Length < 8)
-            {
-                MessageBox.Show("Enter up to 8 characters with an uppercase letter and a number for the password ");
-            }
-            else if (reenterPasswordTextBox.Text != passwordTextBox.Text)
-            {
-                MessageBox.Show("Passwords must match and meet requirements ");
-            }
+            HDClasses.SQLCommands Com = new SQLCommands();
+            create = Com.UserDataSave(username, password);
 
-            //    HDClasses.SQLCommands cmd = new SQLCommands();
-            //    create = cmd.UserDataSave (username, password);
+            if (create == true)
+            {
+                MessageBox.Show("An account already exists for this username.  Please log in.");
+                usernameTextBox.Clear();
+                passwordTextBox.Clear();
+                reenterPasswordTextBox.Clear();
+            }
+            else
+            {
+                // validates for insufficient fields
+                if (usernameTextBox.Text == "")
+                {
+                    MessageBox.Show("Enter a username ");
+                }
+                else if (username.Length < 5)
+                {
+                    MessageBox.Show("Enter up to 5 characters as a username ");
+                }
+                if (passwordTextBox.Text == "")
+                {
+                    MessageBox.Show("Enter a password that contains up to 8 characters with an uppercase letter and a number ");
+                }
+                else if (password.Length < 8)
+                {
+                    MessageBox.Show("Enter up to 8 characters with an uppercase letter and a number for the password ");
+                }
+                else if (reenterPasswordTextBox.Text != passwordTextBox.Text)
+                {
+                    MessageBox.Show("Passwords must match and meet requirements ");
+                }
+                else
+                {
+                    SqlConnection con;
+                    SqlDataAdapter da;
 
-            //    if (create == true)
-            //    {
+                    con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Lioness\\Documents\\GitHub\\HRHelpdesk\\HRHelpdeskApp\\HRHelpdeskApp\\HRHelpdeskApp\\HDDatabase.mdf");
+                    con.Open();
+                    System.Data.SqlClient.SqlCommand cmmd = new SqlCommand("INSERT INTO Login (Username, Password) VALUES (@Username, @Password)", con);
+                    cmmd.Parameters.Add("@Username", usernameTextBox.Text);
+                    cmmd.Parameters.Add("@Password", passwordTextBox.Text);
+                    cmmd.ExecuteNonQuery();
+    
 
-            //    }
+                    MessageBox.Show("Your account has been created.  Please sign in.");
+                    Login loginform = new Login();
+                    this.Hide();
+                    loginform.ShowDialog();
+                }
+            }
         }
 
         private void MemberButton_Click(object sender, EventArgs e)
