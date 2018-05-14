@@ -21,9 +21,9 @@ namespace HRHelpdeskApp
         string middleInitial;
         string maritalStatus;
         string age;
-        ComboBox dobMonth;
-        ComboBox dobDay;
-        ComboBox dobYear;
+        string dobMonth;
+        string dobDay;
+        string dobYear;
         string ssn;
         string gender;
         string streetAddress;
@@ -54,7 +54,7 @@ namespace HRHelpdeskApp
         // This command will accept the entries from the General Information form.
         // It will save the information for all of the patients to the database.
         private void PatientDataSave(string lastName, string firstName, string middleInitial, string maritalStatus,
-            string age, ComboBox dobMonth, ComboBox dobDay, ComboBox dobYear, string ssn, string gender, string streetAddress, string apt, string city,
+            string age, string dobMonth, string dobDay, string dobYear, string ssn, string gender, string streetAddress, string apt, string city,
             string state, string zip, string email, string homePhone, string cellphone, string heardAbout,
             string primaryInsurance, string primaryPhone, string primaryPolicyNum, string primaryCity,
             string primaryState, string secondaryInsurance, string secondaryPhone, string secondaryPolicyNum,
@@ -73,14 +73,14 @@ namespace HRHelpdeskApp
                     + "MaritalStatus, DOBMonth, DOBDay, DOBYear, SSN, Age, "
                     + "StreetAddress, Apt, City, State,"
                     + "Zip, Email, HomePhone, Cellphone, HeardAbout,"
-                    + "PrimaryInsurance, PrimaryPhone, PrimaryPolicy, PrimaryCity,"
-                    + "PrimaryState, SecondaryInsurance, SecondaryPhone, SecondaryPolicy," +
+                    + "PrimaryInsurance, PrimaryPhone, PrimaryPolicyNum, PrimaryCity,"
+                    + "PrimaryState, SecondaryInsurance, SecondaryPhone, SecondaryPolicyNum," +
                     " SecondaryCity, SecondaryState)";
 
                 cmd.CommandText += "VALUES (@LastName, @FirstName, @MiddleInitial, @gender, @maritalStatus, "
                     + "@DOBMonth, @DOBDay, @DOBYear, @SSN, @Age, @StreetAddress, @Apt, @City, @State, "
                     + "@Zip, @Email, @HomePhone, @Cellphone, @HeardAbout, @PrimaryInsurance, @PrimaryPhone, "
-                    + "@PrimaryPolicy, @PrimaryCity, @PrimaryState, @SecondaryInsurance, @SecondaryPhone,"
+                    + "@PrimaryPolicyNum, @PrimaryCity, @PrimaryState, @SecondaryInsurance, @SecondaryPhone,"
                     + "@SecondaryPolicyNum, @SecondaryCity, @SecondaryState)";
 
                 cmd.Connection = sqlConnection1;
@@ -99,12 +99,13 @@ namespace HRHelpdeskApp
             middleInitial = miTextBox.Text;
             maritalStatus = maritalTextBox.Text;
             age = ageTextBox.Text;
-            dobMonth = comboBox1;
-            dobDay = comboBox2;
-            dobYear = comboBox3;
+            dobMonth = monthTextBox.Text;
+            dobDay = dayTextBox.Text;
+            dobYear = yearTextBox.Text;
             ssn = ssnTextBox.Text;
             gender = sexTextBox.Text;
             streetAddress = addressTextBox.Text;
+            apt = aptTextBox.Text;
             city = cityTextBox.Text;
             state = stateTextBox.Text;
             zip = zipTextBox.Text;
@@ -128,25 +129,25 @@ namespace HRHelpdeskApp
 
             con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Lioness\\Documents\\GitHub\\HRHelpdesk\\HRHelpdeskApp\\HRHelpdeskApp\\HRHelpdeskApp\\HDDatabase.mdf");
             con.Open();
-            System.Data.SqlClient.SqlCommand cmmd = new SqlCommand("INSERT INTO Login (LastName, FirstName, MiddleInitial, Gender, "
+            System.Data.SqlClient.SqlCommand cmmd = new SqlCommand("INSERT INTO GenInfo (LastName, FirstName, MiddleInitial, Gender, "
                     + "MaritalStatus, DOBMonth, DOBDay, DOBYear, SSN, Age, "
                     + "StreetAddress, Apt, City, State,"
-                    + "Zip, Email, HomePhone, Cellphone, HearnAbout,"
+                    + "Zip, Email, HomePhone, Cellphone, HeardAbout,"
                     + "PrimaryInsurance, PrimaryPhone, PrimaryPolicyNum, PrimaryCity,"
                     + "PrimaryState, SecondaryInsurance, SecondaryPhone, SecondaryPolicyNum," +
                     " SecondaryCity, SecondaryState) VALUES (@LastName, @FirstName, @MiddleInitial, @gender, @maritalStatus, "
                     + "@DOBMonth, @DOBDay, @DOBYear, @SSN, @Age, @StreetAddress, @Apt, @City, @State, "
                     + "@Zip, @Email, @HomePhone, @Cellphone, @HeardAbout, @PrimaryInsurance, @PrimaryPhone, "
-                    + "@PrimaryPolicy, @PrimaryCity, @PrimaryState, @SecondaryInsurance, @SecondaryPhone,"
-                    + "@SecondaryPolicy, @SecondaryCity, @SecondaryState)", con);
+                    + "@PrimaryPolicyNum, @PrimaryCity, @PrimaryState, @SecondaryInsurance, @SecondaryPhone,"
+                    + "@SecondaryPolicyNum, @SecondaryCity, @SecondaryState)", con);
             cmmd.Parameters.AddWithValue("@LastName", lastNameTextBox.Text);
             cmmd.Parameters.AddWithValue("@FirstName", firstNameTextBox.Text);
             cmmd.Parameters.AddWithValue("@MiddleInitial", miTextBox.Text);
             cmmd.Parameters.AddWithValue("@Gender", sexTextBox.Text);
             cmmd.Parameters.AddWithValue("@MaritalStatus", maritalTextBox.Text);
-            cmmd.Parameters.AddWithValue("@DOBMonth", comboBox1.SelectedItem);
-            cmmd.Parameters.AddWithValue("@DOBDay", comboBox2.SelectedItem);
-            cmmd.Parameters.AddWithValue("@DOBYear", comboBox3.SelectedItem);
+            cmmd.Parameters.AddWithValue("@DOBMonth", monthTextBox.Text);
+            cmmd.Parameters.AddWithValue("@DOBDay", dayTextBox.Text);
+            cmmd.Parameters.AddWithValue("@DOBYear", yearTextBox.Text);
             cmmd.Parameters.AddWithValue("@SSN", ssnTextBox.Text);
             cmmd.Parameters.AddWithValue("@Age", ageTextBox.Text);
             cmmd.Parameters.AddWithValue("@StreetAddress", addressTextBox.Text);
@@ -160,12 +161,12 @@ namespace HRHelpdeskApp
             cmmd.Parameters.AddWithValue("@HeardAbout", hearAboutTextBox.Text);
             cmmd.Parameters.AddWithValue("@PrimaryInsurance", textBox1.Text);
             cmmd.Parameters.AddWithValue("@PrimaryPhone", textBox2.Text);
-            cmmd.Parameters.AddWithValue("@PrimaryPolicy", textBox3.Text);
+            cmmd.Parameters.AddWithValue("@PrimaryPolicyNum", textBox3.Text);
             cmmd.Parameters.AddWithValue("@PrimaryCity", textBox4.Text);
             cmmd.Parameters.AddWithValue("@PrimaryState", textBox5.Text);
             cmmd.Parameters.AddWithValue("@SecondaryInsurance", textBox12.Text);
             cmmd.Parameters.AddWithValue("@SecondaryPhone", textBox11.Text);
-            cmmd.Parameters.AddWithValue("@SecondaryPolicy", textBox10.Text);
+            cmmd.Parameters.AddWithValue("@SecondaryPolicyNum", textBox10.Text);
             cmmd.Parameters.AddWithValue("@SecondaryCity", textBox9.Text);
             cmmd.Parameters.AddWithValue("@SecondaryState", textBox8.Text);
             cmmd.ExecuteNonQuery();
