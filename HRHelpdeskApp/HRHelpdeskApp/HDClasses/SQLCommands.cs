@@ -55,39 +55,41 @@ namespace HDClasses
         // This command will accept the entries from the General Information form.
         // It will save the information for all of the patients to the database.
         public void PatientDataSave(string lastName, string firstName, string middleInitial, string maritalStatus,
-            string age, string dob, string ssn, string gender, string streetAddress, string apt, string city,
+            string age, string dobMonth, string dobDay, string dobYear, string ssn, string gender, string streetAddress, string apt, string city,
             string state, string zip, string email, string homePhone, string cellphone, string heardAbout,
-            string primaryInsurance, string primaryPhone, string primaryPolicyNum, string primaryCity,
-            string primaryState, string secondaryInsurance, string secondaryPhone, string secondaryPolicyNum,
+            string primaryInsurance, string primaryPhone, string primaryPolicy, string primaryCity,
+            string primaryState, string secondaryInsurance, string secondaryPhone, string secondaryPolicy,
             string secondaryCity, string secondaryState)
         {
-            // I need to add the location for the database here
+            HDClasses.Patient create = new HDClasses.Patient();
+            
             System.Data.SqlClient.SqlConnection sqlConnection1 =
                 new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Lioness\\Documents\\GitHub\\HRHelpdesk\\HRHelpdeskApp\\HRHelpdeskApp\\HRHelpdeskApp\\HDDatabase.mdf");
 
-            System.Data.SqlClient.SqlCommand cmd = new SqlCommand();
-            cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = "INSERT MedInfo (LastName, FirstName, MiddleInitial, Gender, "
-                + "MaritalStatus, DOBMonth, DOBDay, DOBYear, SSN, Age, "
-                + "StreetAddress, Apt, City, State,"
-                + "Zip, Email, HomePhone, Cellphone, LearnAbout, "
-                + "PrimaryInsurance, PrimaryPhone, PrimaryPolicy, PrimaryCity,"
-                + "PrimaryState, SecondaryInsurance, SecondaryPhone, SecondaryPolicy," +
-                " SecondaryCity, SecondaryState)";
+            using (sqlConnection1)
+            {
+                System.Data.SqlClient.SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "INSERT INTO GenInfo (LastName, FirstName, MiddleInitial, Gender, "
+                    + "MaritalStatus, DOBMonth, DOBDay, DOBYear, SSN, Age, "
+                    + "StreetAddress, Apt, City, State,"
+                    + "Zip, Email, HomePhone, Cellphone, LearnAbout,"
+                    + "PrimaryInsurance, PrimaryPhone, PrimaryPolicy, PrimaryCity,"
+                    + "PrimaryState, SecondaryInsurance, SecondaryPhone, SecondaryPolicy," +
+                    " SecondaryCity, SecondaryState)";
 
+                cmd.CommandText += "VALUES (@LastName, @FirstName, @MiddleInitial, @gender, @maritalStatus, "
+                    + "@DOBMonth, @DOBDay, @DOBYear, @SSN, @Age, @StreetAddress, @Apt, @City, @State, "
+                    + "@Zip, @Email, @HomePhone, @Cellphone, @LeardAbout, @PrimaryInsurance, @PrimaryPhone, "
+                    + "@PrimaryPolicy, @PrimaryCity, @PrimaryState, @SecondaryInsurance, @SecondaryPhone,"
+                    + "@SecondaryPolicyNum, @SecondaryCity, @SecondaryState)";
 
-            cmd.CommandText += "VALUES ('" + lastName + "', '" + firstName + "', '" + middleInitial + "' , '" + gender + "', '"
-                + maritalStatus + "', '" + dob + "', '" + ssn + "', '" + age + "', '"
-                + streetAddress + "', '" + apt + "', '" + city + "', '" + state + "', '"
-                + zip + "', '" + email + "', '" + homePhone + "', '" + cellphone + "', '" + heardAbout + "', '"
-                + primaryInsurance + "', '" + primaryPhone + "', '" + primaryPolicyNum + "', '" + primaryCity
-                + primaryState + "', '" + secondaryInsurance + "', '" + secondaryPhone + "', '" + secondaryPolicyNum + "', '"
-                + secondaryCity + "', '" + secondaryState + "')'";
+                cmd.Connection = sqlConnection1;
 
-            cmd.Connection = sqlConnection1;
+                sqlConnection1.Open();
 
-            sqlConnection1.Open();
-            cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
+            }
             sqlConnection1.Close();
         }
 

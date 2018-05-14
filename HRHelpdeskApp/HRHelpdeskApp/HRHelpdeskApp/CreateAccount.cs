@@ -100,8 +100,8 @@ namespace HRHelpdeskApp
                     con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Lioness\\Documents\\GitHub\\HRHelpdesk\\HRHelpdeskApp\\HRHelpdeskApp\\HRHelpdeskApp\\HDDatabase.mdf");
                     con.Open();
                     System.Data.SqlClient.SqlCommand cmmd = new SqlCommand("INSERT INTO Login (Username, Password) VALUES (@Username, @Password)", con);
-                    cmmd.Parameters.Add("@Username", usernameTextBox.Text);
-                    cmmd.Parameters.Add("@Password", passwordTextBox.Text);
+                    cmmd.Parameters.AddWithValue("@Username", usernameTextBox.Text);
+                    cmmd.Parameters.AddWithValue("@Password", passwordTextBox.Text);
                     cmmd.ExecuteNonQuery();
     
 

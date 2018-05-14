@@ -430,6 +430,19 @@
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sept",
+            "Oct",
+            "Nov",
+            "Dec"});
             this.comboBox1.Location = new System.Drawing.Point(273, 113);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
@@ -625,7 +638,7 @@
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(603, 38);
+            this.textBox11.Location = new System.Drawing.Point(660, 38);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(145, 20);
             this.textBox11.TabIndex = 40;
@@ -633,7 +646,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(519, 41);
+            this.label27.Location = new System.Drawing.Point(548, 41);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(81, 13);
             this.label27.TabIndex = 39;
