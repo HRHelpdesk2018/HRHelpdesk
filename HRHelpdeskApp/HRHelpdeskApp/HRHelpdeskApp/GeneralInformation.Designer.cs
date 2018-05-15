@@ -58,6 +58,9 @@
             this.sexTextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.yearTextBox = new System.Windows.Forms.TextBox();
+            this.dayTextBox = new System.Windows.Forms.TextBox();
+            this.monthTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -97,9 +100,6 @@
             this.label33 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.monthTextBox = new System.Windows.Forms.TextBox();
-            this.dayTextBox = new System.Windows.Forms.TextBox();
-            this.yearTextBox = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -112,7 +112,7 @@
             this.ageTextBox.Location = new System.Drawing.Point(75, 114);
             this.ageTextBox.Name = "ageTextBox";
             this.ageTextBox.Size = new System.Drawing.Size(51, 20);
-            this.ageTextBox.TabIndex = 38;
+            this.ageTextBox.TabIndex = 6;
             // 
             // label22
             // 
@@ -128,7 +128,7 @@
             this.zipTextBox.Location = new System.Drawing.Point(564, 197);
             this.zipTextBox.Name = "zipTextBox";
             this.zipTextBox.Size = new System.Drawing.Size(190, 20);
-            this.zipTextBox.TabIndex = 36;
+            this.zipTextBox.TabIndex = 14;
             // 
             // label21
             // 
@@ -144,7 +144,7 @@
             this.maritalTextBox.Location = new System.Drawing.Point(564, 80);
             this.maritalTextBox.Name = "maritalTextBox";
             this.maritalTextBox.Size = new System.Drawing.Size(112, 20);
-            this.maritalTextBox.TabIndex = 34;
+            this.maritalTextBox.TabIndex = 5;
             // 
             // label20
             // 
@@ -160,7 +160,7 @@
             this.emailTextBox.Location = new System.Drawing.Point(493, 225);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(284, 20);
-            this.emailTextBox.TabIndex = 32;
+            this.emailTextBox.TabIndex = 17;
             // 
             // label19
             // 
@@ -176,7 +176,7 @@
             this.cellphoneTextBox.Location = new System.Drawing.Point(303, 228);
             this.cellphoneTextBox.Name = "cellphoneTextBox";
             this.cellphoneTextBox.Size = new System.Drawing.Size(124, 20);
-            this.cellphoneTextBox.TabIndex = 30;
+            this.cellphoneTextBox.TabIndex = 16;
             // 
             // label18
             // 
@@ -192,7 +192,7 @@
             this.homePhoneTextBox.Location = new System.Drawing.Point(81, 228);
             this.homePhoneTextBox.Name = "homePhoneTextBox";
             this.homePhoneTextBox.Size = new System.Drawing.Size(140, 20);
-            this.homePhoneTextBox.TabIndex = 28;
+            this.homePhoneTextBox.TabIndex = 15;
             // 
             // label17
             // 
@@ -208,7 +208,7 @@
             this.stateTextBox.Location = new System.Drawing.Point(323, 200);
             this.stateTextBox.Name = "stateTextBox";
             this.stateTextBox.Size = new System.Drawing.Size(137, 20);
-            this.stateTextBox.TabIndex = 26;
+            this.stateTextBox.TabIndex = 13;
             // 
             // label16
             // 
@@ -224,7 +224,7 @@
             this.cityTextBox.Location = new System.Drawing.Point(39, 200);
             this.cityTextBox.Name = "cityTextBox";
             this.cityTextBox.Size = new System.Drawing.Size(156, 20);
-            this.cityTextBox.TabIndex = 24;
+            this.cityTextBox.TabIndex = 12;
             // 
             // groupBox2
             // 
@@ -242,7 +242,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(45, 34);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 6;
+            this.dateTimePicker1.TabIndex = 30;
             // 
             // label15
             // 
@@ -258,7 +258,7 @@
             this.aptTextBox.Location = new System.Drawing.Point(593, 163);
             this.aptTextBox.Name = "aptTextBox";
             this.aptTextBox.Size = new System.Drawing.Size(43, 20);
-            this.aptTextBox.TabIndex = 22;
+            this.aptTextBox.TabIndex = 11;
             // 
             // label14
             // 
@@ -274,7 +274,7 @@
             this.addressTextBox.Location = new System.Drawing.Point(60, 163);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(446, 20);
-            this.addressTextBox.TabIndex = 20;
+            this.addressTextBox.TabIndex = 10;
             // 
             // label13
             // 
@@ -299,7 +299,7 @@
             this.ssnTextBox.Location = new System.Drawing.Point(132, 76);
             this.ssnTextBox.Name = "ssnTextBox";
             this.ssnTextBox.Size = new System.Drawing.Size(135, 20);
-            this.ssnTextBox.TabIndex = 16;
+            this.ssnTextBox.TabIndex = 3;
             // 
             // label11
             // 
@@ -315,14 +315,14 @@
             this.hearAboutTextBox.Location = new System.Drawing.Point(152, 268);
             this.hearAboutTextBox.Name = "hearAboutTextBox";
             this.hearAboutTextBox.Size = new System.Drawing.Size(573, 20);
-            this.hearAboutTextBox.TabIndex = 14;
+            this.hearAboutTextBox.TabIndex = 18;
             // 
             // sexTextBox
             // 
             this.sexTextBox.Location = new System.Drawing.Point(392, 80);
             this.sexTextBox.Name = "sexTextBox";
             this.sexTextBox.Size = new System.Drawing.Size(35, 20);
-            this.sexTextBox.TabIndex = 18;
+            this.sexTextBox.TabIndex = 4;
             // 
             // label10
             // 
@@ -377,9 +377,30 @@
             this.groupBox1.Location = new System.Drawing.Point(21, 99);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(830, 306);
-            this.groupBox1.TabIndex = 11;
+            this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "General Details";
+            // 
+            // yearTextBox
+            // 
+            this.yearTextBox.Location = new System.Drawing.Point(648, 113);
+            this.yearTextBox.Name = "yearTextBox";
+            this.yearTextBox.Size = new System.Drawing.Size(100, 20);
+            this.yearTextBox.TabIndex = 9;
+            // 
+            // dayTextBox
+            // 
+            this.dayTextBox.Location = new System.Drawing.Point(487, 114);
+            this.dayTextBox.Name = "dayTextBox";
+            this.dayTextBox.Size = new System.Drawing.Size(100, 20);
+            this.dayTextBox.TabIndex = 8;
+            // 
+            // monthTextBox
+            // 
+            this.monthTextBox.Location = new System.Drawing.Point(315, 113);
+            this.monthTextBox.Name = "monthTextBox";
+            this.monthTextBox.Size = new System.Drawing.Size(100, 20);
+            this.monthTextBox.TabIndex = 7;
             // 
             // label8
             // 
@@ -514,7 +535,7 @@
             this.saveButton.Location = new System.Drawing.Point(302, 691);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(277, 63);
-            this.saveButton.TabIndex = 13;
+            this.saveButton.TabIndex = 29;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
@@ -553,7 +574,7 @@
             this.textBox8.Location = new System.Drawing.Point(540, 75);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(137, 20);
-            this.textBox8.TabIndex = 46;
+            this.textBox8.TabIndex = 28;
             // 
             // label24
             // 
@@ -569,7 +590,7 @@
             this.textBox9.Location = new System.Drawing.Point(350, 75);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(128, 20);
-            this.textBox9.TabIndex = 44;
+            this.textBox9.TabIndex = 27;
             // 
             // label25
             // 
@@ -585,7 +606,7 @@
             this.textBox10.Location = new System.Drawing.Point(140, 72);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(145, 20);
-            this.textBox10.TabIndex = 42;
+            this.textBox10.TabIndex = 26;
             // 
             // label26
             // 
@@ -601,7 +622,7 @@
             this.textBox11.Location = new System.Drawing.Point(660, 38);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(145, 20);
-            this.textBox11.TabIndex = 40;
+            this.textBox11.TabIndex = 25;
             // 
             // label27
             // 
@@ -625,7 +646,7 @@
             this.textBox12.Location = new System.Drawing.Point(158, 38);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(369, 20);
-            this.textBox12.TabIndex = 3;
+            this.textBox12.TabIndex = 24;
             // 
             // groupBox3
             // 
@@ -652,7 +673,7 @@
             this.textBox5.Location = new System.Drawing.Point(537, 87);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(137, 20);
-            this.textBox5.TabIndex = 46;
+            this.textBox5.TabIndex = 23;
             // 
             // label29
             // 
@@ -668,7 +689,7 @@
             this.textBox4.Location = new System.Drawing.Point(354, 87);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(128, 20);
-            this.textBox4.TabIndex = 44;
+            this.textBox4.TabIndex = 22;
             // 
             // label30
             // 
@@ -684,7 +705,7 @@
             this.textBox3.Location = new System.Drawing.Point(144, 87);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(145, 20);
-            this.textBox3.TabIndex = 42;
+            this.textBox3.TabIndex = 21;
             // 
             // label31
             // 
@@ -700,7 +721,7 @@
             this.textBox2.Location = new System.Drawing.Point(603, 38);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(145, 20);
-            this.textBox2.TabIndex = 40;
+            this.textBox2.TabIndex = 20;
             // 
             // label32
             // 
@@ -724,7 +745,7 @@
             this.textBox1.Location = new System.Drawing.Point(138, 38);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(369, 20);
-            this.textBox1.TabIndex = 3;
+            this.textBox1.TabIndex = 19;
             // 
             // label34
             // 
@@ -734,27 +755,6 @@
             this.label34.Size = new System.Drawing.Size(125, 13);
             this.label34.TabIndex = 2;
             this.label34.Text = "Primary Insurance Name:";
-            // 
-            // monthTextBox
-            // 
-            this.monthTextBox.Location = new System.Drawing.Point(315, 113);
-            this.monthTextBox.Name = "monthTextBox";
-            this.monthTextBox.Size = new System.Drawing.Size(100, 20);
-            this.monthTextBox.TabIndex = 39;
-            // 
-            // dayTextBox
-            // 
-            this.dayTextBox.Location = new System.Drawing.Point(487, 114);
-            this.dayTextBox.Name = "dayTextBox";
-            this.dayTextBox.Size = new System.Drawing.Size(100, 20);
-            this.dayTextBox.TabIndex = 40;
-            // 
-            // yearTextBox
-            // 
-            this.yearTextBox.Location = new System.Drawing.Point(648, 113);
-            this.yearTextBox.Name = "yearTextBox";
-            this.yearTextBox.Size = new System.Drawing.Size(100, 20);
-            this.yearTextBox.TabIndex = 41;
             // 
             // GeneralInformation
             // 

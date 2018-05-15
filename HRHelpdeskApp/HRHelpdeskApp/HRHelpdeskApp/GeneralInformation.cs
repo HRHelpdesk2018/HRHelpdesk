@@ -83,6 +83,7 @@ namespace HRHelpdeskApp
                     + "@PrimaryPolicyNum, @PrimaryCity, @PrimaryState, @SecondaryInsurance, @SecondaryPhone,"
                     + "@SecondaryPolicyNum, @SecondaryCity, @SecondaryState)";
 
+
                 cmd.Connection = sqlConnection1;
 
                 sqlConnection1.Open();
@@ -129,46 +130,48 @@ namespace HRHelpdeskApp
 
             con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Lioness\\Documents\\GitHub\\HRHelpdesk\\HRHelpdeskApp\\HRHelpdeskApp\\HRHelpdeskApp\\HDDatabase.mdf");
             con.Open();
-            System.Data.SqlClient.SqlCommand cmmd = new SqlCommand("INSERT INTO GenInfo (LastName, FirstName, MiddleInitial, Gender, "
-                    + "MaritalStatus, DOBMonth, DOBDay, DOBYear, SSN, Age, "
-                    + "StreetAddress, Apt, City, State,"
-                    + "Zip, Email, HomePhone, Cellphone, HeardAbout,"
+
+            System.Data.SqlClient.SqlCommand cmmd = new SqlCommand("INSERT INTO GenInfo (LastName, FirstName, MiddleInitial, StreetAddress, "
+                    + "Apt, City, State, Zip, "
+                    + "MaritalStatus, DOBMonth, DOBDay, DOBYear, SSN, Gender, Age, "
+                    + "Email, HomePhone, Cellphone, HeardAbout,"
                     + "PrimaryInsurance, PrimaryPhone, PrimaryPolicyNum, PrimaryCity,"
                     + "PrimaryState, SecondaryInsurance, SecondaryPhone, SecondaryPolicyNum," +
-                    " SecondaryCity, SecondaryState) VALUES (@LastName, @FirstName, @MiddleInitial, @gender, @maritalStatus, "
-                    + "@DOBMonth, @DOBDay, @DOBYear, @SSN, @Age, @StreetAddress, @Apt, @City, @State, "
-                    + "@Zip, @Email, @HomePhone, @Cellphone, @HeardAbout, @PrimaryInsurance, @PrimaryPhone, "
+                     " SecondaryCity, SecondaryState) VALUES (@LastName, @FirstName, @MiddleInitial, "
+                     + "@StreetAddress, @Apt, @City, @State, @Zip, "
+                    + " @MaritalStatus, @DOBMonth, @DOBDay, @DOBYear, @SSN, @Gender, @Age, "
+                    + "@Email, @HomePhone, @Cellphone, @HeardAbout, @PrimaryInsurance, @PrimaryPhone, "
                     + "@PrimaryPolicyNum, @PrimaryCity, @PrimaryState, @SecondaryInsurance, @SecondaryPhone,"
                     + "@SecondaryPolicyNum, @SecondaryCity, @SecondaryState)", con);
-            cmmd.Parameters.AddWithValue("@LastName", lastNameTextBox.Text);
-            cmmd.Parameters.AddWithValue("@FirstName", firstNameTextBox.Text);
-            cmmd.Parameters.AddWithValue("@MiddleInitial", miTextBox.Text);
-            cmmd.Parameters.AddWithValue("@Gender", sexTextBox.Text);
-            cmmd.Parameters.AddWithValue("@MaritalStatus", maritalTextBox.Text);
-            cmmd.Parameters.AddWithValue("@DOBMonth", monthTextBox.Text);
-            cmmd.Parameters.AddWithValue("@DOBDay", dayTextBox.Text);
-            cmmd.Parameters.AddWithValue("@DOBYear", yearTextBox.Text);
-            cmmd.Parameters.AddWithValue("@SSN", ssnTextBox.Text);
-            cmmd.Parameters.AddWithValue("@Age", ageTextBox.Text);
-            cmmd.Parameters.AddWithValue("@StreetAddress", addressTextBox.Text);
-            cmmd.Parameters.AddWithValue("@Apt", aptTextBox.Text);
-            cmmd.Parameters.AddWithValue("@City", cityTextBox.Text);
-            cmmd.Parameters.AddWithValue("@State", stateTextBox.Text);
-            cmmd.Parameters.AddWithValue("@Zip", zipTextBox.Text);
-            cmmd.Parameters.AddWithValue("@Email", emailTextBox.Text);
-            cmmd.Parameters.AddWithValue("@HomePhone", homePhoneTextBox.Text);
-            cmmd.Parameters.AddWithValue("@cellphone", cellphoneTextBox.Text);
-            cmmd.Parameters.AddWithValue("@HeardAbout", hearAboutTextBox.Text);
-            cmmd.Parameters.AddWithValue("@PrimaryInsurance", textBox1.Text);
-            cmmd.Parameters.AddWithValue("@PrimaryPhone", textBox2.Text);
-            cmmd.Parameters.AddWithValue("@PrimaryPolicyNum", textBox3.Text);
-            cmmd.Parameters.AddWithValue("@PrimaryCity", textBox4.Text);
-            cmmd.Parameters.AddWithValue("@PrimaryState", textBox5.Text);
-            cmmd.Parameters.AddWithValue("@SecondaryInsurance", textBox12.Text);
-            cmmd.Parameters.AddWithValue("@SecondaryPhone", textBox11.Text);
-            cmmd.Parameters.AddWithValue("@SecondaryPolicyNum", textBox10.Text);
-            cmmd.Parameters.AddWithValue("@SecondaryCity", textBox9.Text);
-            cmmd.Parameters.AddWithValue("@SecondaryState", textBox8.Text);
+            cmmd.Parameters.AddWithValue("@LastName", lastName);
+            cmmd.Parameters.AddWithValue("@FirstName", firstName);
+            cmmd.Parameters.AddWithValue("@MiddleInitial", middleInitial);
+            cmmd.Parameters.AddWithValue("@StreetAddress", streetAddress);
+            cmmd.Parameters.AddWithValue("@Apt", apt);
+            cmmd.Parameters.AddWithValue("@City", city);
+            cmmd.Parameters.AddWithValue("@State", state);
+            cmmd.Parameters.AddWithValue("@Zip", zip);
+            cmmd.Parameters.AddWithValue("@MaritalStatus", maritalStatus);
+            cmmd.Parameters.AddWithValue("@DOBMonth", dobMonth);
+            cmmd.Parameters.AddWithValue("@DOBDay", dobDay);
+            cmmd.Parameters.AddWithValue("@DOBYear", dobYear);
+            cmmd.Parameters.AddWithValue("@SSN", ssn);
+            cmmd.Parameters.AddWithValue("@Gender", gender);
+            cmmd.Parameters.AddWithValue("@Age", age);
+            cmmd.Parameters.AddWithValue("@Email", email);
+            cmmd.Parameters.AddWithValue("@HomePhone", homePhone);
+            cmmd.Parameters.AddWithValue("@cellphone", cellphone);
+            cmmd.Parameters.AddWithValue("@HeardAbout", heardAbout);
+            cmmd.Parameters.AddWithValue("@PrimaryInsurance", primaryInsurance);
+            cmmd.Parameters.AddWithValue("@PrimaryPhone", primaryPhone);
+            cmmd.Parameters.AddWithValue("@PrimaryPolicyNum", primaryPolicyNum);
+            cmmd.Parameters.AddWithValue("@PrimaryCity", primaryCity);
+            cmmd.Parameters.AddWithValue("@PrimaryState", primaryState);
+            cmmd.Parameters.AddWithValue("@SecondaryInsurance", secondaryInsurance);
+            cmmd.Parameters.AddWithValue("@SecondaryPhone", secondaryPhone);
+            cmmd.Parameters.AddWithValue("@SecondaryPolicyNum", secondaryPolicyNum);
+            cmmd.Parameters.AddWithValue("@SecondaryCity", secondaryCity);
+            cmmd.Parameters.AddWithValue("@SecondaryState", secondaryState);
             cmmd.ExecuteNonQuery();
             con.Close();
 
